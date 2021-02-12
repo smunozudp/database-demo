@@ -28,4 +28,10 @@ public class PersonDao {
     public int deleteById(int id){
        return jdbcTemplate.update("delete from person where id =?", id);
     }
+    //Update name of table person;
+    public int updateByIdAndName(String newName, Person person){
+       return jdbcTemplate.update("update person set name=? where id = ? and name = ?",
+               newName, person.getId(), person.getName());
+    }
+
 }
