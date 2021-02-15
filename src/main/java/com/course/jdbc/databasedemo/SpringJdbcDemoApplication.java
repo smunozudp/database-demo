@@ -11,15 +11,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Date;
 
-@SpringBootApplication
-public class DatabaseDemoApplication implements CommandLineRunner {
+//@SpringBootApplication
+public class SpringJdbcDemoApplication implements CommandLineRunner {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private PersonDao dao;
 
     public static void main(String[] args) {
-        SpringApplication.run(DatabaseDemoApplication.class, args);
+        SpringApplication.run(SpringJdbcDemoApplication.class, args);
     }
 
     @Override
@@ -30,15 +30,15 @@ public class DatabaseDemoApplication implements CommandLineRunner {
         Person incorrectPerson = new Person(2, "Jack", "Chile", new Date());
 
 
-        logger.info("All users -> {}", this.dao.findAll());
-        System.out.println("");
-        logger.info("User by Id-> {}", this.dao.findById(1));
-        System.out.println("");
-        logger.info("Delete User by Id-> {}", this.dao.deleteById(3));
-        System.out.println("");
-        logger.info("Update User by Id and name, amount of row affected -> {}", this.dao.updateByIdAndName("Melita", correctPerson));
-        System.out.println("");
-        logger.info("Update User by Id and name, amount of row affected -> {}", this.dao.updateByIdAndName("Melita", correctPerson));
+//        logger.info("All users -> {}", this.dao.findAll());
+//        System.out.println("");
+//        logger.info("User by Id-> {}", this.dao.findById(1));
+//        System.out.println("");
+//        logger.info("Delete User by Id-> {}", this.dao.deleteById(3));
+//        System.out.println("");
+//        logger.info("Update User by Id and name, amount of row affected -> {}", this.dao.updateByIdAndName("Melita", correctPerson));
+//        System.out.println("");
+//        logger.info("Update User by Id and name, amount of row affected -> {}", this.dao.updateByIdAndName("Melita", correctPerson));
 
     }
 

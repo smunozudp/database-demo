@@ -1,11 +1,11 @@
-create table person
-(
-    id  integer auto_increment not null,
-    name varchar(255) not null,
-    location varchar(255),
-    birth_date timestamp,
-    primary key (id)
-);
+-- create table person
+-- (
+--     id  integer auto_increment not null,
+--     name varchar(255) not null,
+--     location varchar(255),
+--     birth_date timestamp,
+--     primary key (id)
+-- );
 
 INSERT INTO person (name, location, birth_date)
 VALUES ('seba', 'Chile', sysdate());
